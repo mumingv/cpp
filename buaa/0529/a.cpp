@@ -14,3 +14,7 @@ void A::mm() {
     std::cout << "A's mm is executed." << std::endl;
 }
 
+void A::f() {
+    std::cout << "A's f is executed." << std::endl;
+}
+

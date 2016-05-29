@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "a.h"
+#include "b.h"
 
 using namespace std;
 
@@ -43,9 +44,9 @@ void swap4(int *i, int *j) {
 }
 
 int main(int argc, char *argv[]) {
-    char *ptr;
-    cout << "test" << endl;
-
+    /**
+     * 指针&引用
+     */
     int a = 3;
     int b = 5;
     swap1(a, b);
@@ -66,20 +67,10 @@ int main(int argc, char *argv[]) {
     swap4(&a, &b);
     cout << "sawp4: " << "a = " << a << ", " << "b = " << b << endl;
 
-    A objA;
-
+    /**
+     * 多态 
+     */
+    A *p = new B();
+    p->f(); //如果A::f()不是虚函数则调用A::f()，如果A::f()是虚函数则调用B::f()，以此类推。
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
