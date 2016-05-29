@@ -1,6 +1,14 @@
 #include <iostream>
+#include <stdlib.h>
+#include "a.h"
 
 using namespace std;
+
+char *testM() {
+    char *p = NULL;
+    p = (char *)malloc(sizeof(char) * 10);
+    return p;
+}
 
 // 无效
 void swap1(int i, int j) {
@@ -57,6 +65,8 @@ int main(int argc, char *argv[]) {
     b = 5;
     swap4(&a, &b);
     cout << "sawp4: " << "a = " << a << ", " << "b = " << b << endl;
+
+    A objA;
 
 }
 
