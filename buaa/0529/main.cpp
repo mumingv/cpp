@@ -5,12 +5,6 @@
 
 using namespace std;
 
-char *testM() {
-    char *p = NULL;
-    p = (char *)malloc(sizeof(char) * 10);
-    return p;
-}
-
 // 无效
 void swap1(int i, int j) {
     int temp;
@@ -43,6 +37,13 @@ void swap4(int *i, int *j) {
     j = temp;
 }
 
+/* 内存分配 */
+char *testM() {
+    char *p = NULL;
+    p = (char *)malloc(sizeof(char) * 10);
+    return p;
+}
+
 int main(int argc, char *argv[]) {
     /**
      * 指针&引用
@@ -66,6 +67,15 @@ int main(int argc, char *argv[]) {
     b = 5;
     swap4(&a, &b);
     cout << "sawp4: " << "a = " << a << ", " << "b = " << b << endl;
+
+    /**
+     * 内存分配 
+     */
+    char *pM = testM();
+    if (pM) {
+        cout << "Alloc memory successfully!" << endl;
+    }
+    free(pM);
 
     /**
      * 多态 
