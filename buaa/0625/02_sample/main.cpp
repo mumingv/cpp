@@ -19,7 +19,19 @@ int main(int argc, char *argv[]) {
     p->print();  // A's print is executed.
     ((B *)p)->print();  // B's print is executed.
 
-
-
+    /**
+     * 映射(上映射&下映射)
+     */
+    A *ptr_b = NULL;
+    if (ptr_b = dynamic_cast<B *>(ptr_b)) {
+        //cout << 'dynamic_cast return true' << endl;
+    }
 }
+
+
+
+
+
+
+
 
