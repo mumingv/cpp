@@ -10,10 +10,10 @@
  ***********************************************************/
 
 //程序库开发人员
-class Library{
+class Library {
 public:
     Library() {};
-	void step1();
+    void step1();
     void step3();
     void step5();
 };

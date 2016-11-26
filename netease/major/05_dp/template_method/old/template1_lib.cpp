@@ -14,14 +14,14 @@
 using namespace std;
 
 //程序库开发人员
-void Library::step1(){
-    cout << "process step1" << endl;
+void Library::step1() {
+    cout << "process " << __FUNCTION__ << endl;
 }
 
-void Library::step3(){
-    cout << "process step2" << endl;
+void Library::step3() {
+    cout << "process " << __FUNCTION__ << endl;
 }
 
-void Library::step5(){
-    cout << "process step5" << endl;
+void Library::step5() {
+    cout << "process " << __FUNCTION__ << endl;
 }

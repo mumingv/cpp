@@ -14,33 +14,30 @@
 using namespace std;
 
 //应用程序开发人员
-class Application{
+class Application {
 public:
-	bool step2(){
-        cout << "process step2" << endl;
+    bool step2() {
+        cout << "process " << __FUNCTION__ << endl;
     }
 
-    void step4(){
-        cout << "process step4" << endl;
+    void step4() {
+        cout << "process " << __FUNCTION__ << endl;
     }
 };
 
-int main()
-{
-	Library lib();
-	//Application app();
+int main() {
+    Library lib;
+    Application app;
 
-	lib->step1();
+    lib.step1();
 
-    /*
-	if (app.step2()){
-		lib.step3();
-	}
+    if (app.step2()) {
+        lib.step3();
+    }
 
-	for (int i = 0; i < 4; i++){
-		app.step4();
-	}
+    for (int i = 0; i < 4; i++) {
+        app.step4();
+    }
 
-	lib.step5();
-    */
+    lib.step5();
 }
