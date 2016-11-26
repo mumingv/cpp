@@ -1,36 +1,38 @@
+/***********************************************************
+ *     FileName: template2_lib.cpp
+ *         Desc: 模板模式
+ *       Author: Jie Yin
+ *        Email: mumingv@163.com
+ *     HomePage: https://github.com/mumingv
+ *      Version: 0.0.1
+ *   LastChange: 2016-11-26 20:23:03
+ *      History:
+ ***********************************************************/
+#include <iostream>
+#include "template2_lib.h"
+
+using namespace std;
+
 //程序库开发人员
-class Library{
-public:
-	//稳定 template method
-    void Run(){
-        
-        Step1();
-
-        if (Step2()) { //支持变化 ==> 虚函数的多态调用
-            Step3(); 
-        }
-
-        for (int i = 0; i < 4; i++){
-            Step4(); //支持变化 ==> 虚函数的多态调用
-        }
-
-        Step5();
-
+void Library::run(){
+    step1();
+    if (step2()) {  // 支持变化，使用虚函数的多态调用能力
+        step3(); 
     }
-	virtual ~Library(){ }
-
-protected:
-	
-	void Step1() { //稳定
-        //.....
+    for (int i = 0; i < 4; i++){
+        step4();  // 支持变化，使用虚函数的多态调用能力
     }
-	void Step3() {//稳定
-        //.....
-    }
-	void Step5() { //稳定
-		//.....
-	}
+    step5();
+}
 
-	virtual bool Step2() = 0;//变化
-    virtual void Step4() =0; //变化
-};
+void Library::step1() {
+    cout << "process Library's " << __FUNCTION__ << endl;
+}
+
+void Library::step3() {
+    cout << "process Library's " << __FUNCTION__ << endl;
+}
+
+void Library::step5() {
+    cout << "process Library's " << __FUNCTION__ << endl;
+}

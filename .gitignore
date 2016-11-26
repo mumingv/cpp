@@ -1,5 +1,7 @@
 a.out
 output
+main
 tags
 mtags
 *.o
+.*
