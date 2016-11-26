@@ -14,6 +14,8 @@
 using namespace std;
 
 //程序库开发人员
+
+// 模板方法(由基类提供的稳定框架)
 void Library::run(){
     step1();
     if (step2()) {  // 支持变化，使用虚函数的多态调用能力
